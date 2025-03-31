@@ -37,7 +37,7 @@ public struct Bullets: ContentItem {
             // TODO: Not sure if hardocing leading here is great
             VStack(alignment: .leading, spacing: 10) {
                 ForEach(self.words(), id:\.id) { word in
-                    HStack(alignment: .center, spacing: 10) {
+                    HStack(alignment: .firstTextBaseline, spacing: 10) {
                         Words(self.style.display, color: word.color, font: word.font).buildView(theme: theme)
                         word.buildView(theme: theme)
                     }
